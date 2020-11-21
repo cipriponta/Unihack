@@ -1,0 +1,50 @@
+{% extends "base_template.html" %}
+{% block content %}
+<h1>Registration Form</h1>
+<form action="" method = "post">
+    {{form.hidden_tag()}}
+    <p>
+        {{form.last_name.label}} <br>
+        {{form.last_name(size = 32)}} <br>
+        {% for error in form.last_name.errors %}
+        <span style = "color: red;"> [{{error}}] </span>
+        {% endfor %}
+    </p>
+    <p>
+        {{form.first_name.label}} <br>
+        {{form.first_name(size = 32)}} <br>
+        {% for error in form.first_name.errors %}
+        <span style = "color: red;"> [{{error}}] </span>
+        {% endfor %}
+    </p>
+    <p>
+        {{form.country.label}} <br>
+        {{form.country(size = 32)}} <br>
+        {% for error in form.country.errors %}
+        <span style = "color: red;"> [{{error}}] </span>
+        {% endfor %}
+    </p>
+    <p>
+        {{form.city.label}} <br>
+        {{form.city(size = 32)}} <br>
+        {% for error in form.city.errors %}
+        <span style = "color: red;"> [{{error}}] </span>
+        {% endfor %}
+    </p>
+     <p>
+        {{form.street.label}} <br>
+        {{form.street(size = 32)}} <br>
+        {% for error in form.street.errors %}
+        <span style = "color: red;"> [{{error}}] </span>
+         {% endfor %}
+    </p>
+     <p>
+        {{form.number.label}} <br>
+        {{form.number(size = 32)}} <br>
+        {% for error in form.number.errors %}
+        <span style = "color: red;"> [{{error}}] </span>
+         {% endfor %}
+    </p>
+    <p>{{form.submit()}}</p>
+</form>
+{% endblock %}

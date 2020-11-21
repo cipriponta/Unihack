@@ -1,0 +1,16 @@
+{% extends "base_template.html" %}
+{% block content %}
+<h1>People Database</h1>
+<ul>
+{% for person in people %}
+<lu>
+    {{person.last_name}} <br>
+    {{person.first_name}} <br>
+    {{person.country}} <br>
+    {{person.city}} <br>
+    {{person.street}} <br>
+    {{person.number}} <br> <br>
+</lu>
+{% endfor %}
+</ul>
+{% endblock%}
