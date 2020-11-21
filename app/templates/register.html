@@ -45,6 +45,13 @@
         <span style = "color: red;"> [{{error}}] </span>
          {% endfor %}
     </p>
+     <p>
+        {{form.products.label}} <br>
+        {{form.products(size = 32)}} <br>
+        {% for error in form.products.errors %}
+        <span style = "color: red;"> [{{error}}] </span>
+         {% endfor %}
+    </p>
     <p>{{form.submit()}}</p>
 </form>
 {% endblock %}

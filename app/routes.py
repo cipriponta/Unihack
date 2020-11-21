@@ -16,7 +16,7 @@ def register():
     if form.validate_on_submit():
         person = Person(last_name = form.last_name.data, first_name = form.first_name.data,
                         country = form.country.data, city = form.city.data, street = form.street.data,
-                        number = form.number.data)
+                        number = form.number.data, products = form.products.data)
         person.calculate_coords()
         if person.longitude and person.latitude:
             db.session.add(person)

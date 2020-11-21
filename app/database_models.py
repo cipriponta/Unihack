@@ -24,6 +24,7 @@ class Person(db.Model):
     city = db.Column(db.String(32), index = True)
     street = db.Column(db.String(32), index = True)
     number = db.Column(db.String(32), index = True)
+    products = db.Column(db.String(32), index = True)
     latitude = db.Column(db.Float)
     longitude = db.Column(db.Float)
 

@@ -35,7 +35,7 @@ def calculate_route():
     people_list = Person.query.all()
 
     starting_point = Person(last_name = "Starting", first_name = "Point", country = "Romania",
-                            city = "Arad", street = "Bulevardul Revolutiei", number = "75")
+                            city = "Arad", street = "Bulevardul Revolutiei", number = "75", products = "nothing")
 
     starting_point.calculate_coords()
 

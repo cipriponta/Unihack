@@ -10,4 +10,5 @@ class PersonForm(FlaskForm):
     city = StringField('City:', validators=[DataRequired()])
     street = StringField('Street:', validators=[DataRequired()])
     number = StringField('Number:', validators=[DataRequired()])
+    products = StringField('Products:', validators=[DataRequired()])
     submit = SubmitField('Submit')
