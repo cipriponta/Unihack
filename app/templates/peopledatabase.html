@@ -1,16 +1,19 @@
 {% extends "base_template.html" %}
 {% block content %}
 <h1>People Database</h1>
-<ul>
+<div >
 {% for person in people %}
-<lu>
-    {{person.last_name}} <br>
-    {{person.first_name}} <br>
-    {{person.country}} <br>
-    {{person.city}} <br>
-    {{person.street}} <br>
-    {{person.number}} <br> <br>
-</lu>
+
+    Last Name: {{person.last_name}} <br>
+    First name: {{person.first_name}} <br>
+    Country: {{person.country}} <br>
+    City: {{person.city}} <br>
+    Street: {{person.street}} <br>
+    Number: {{person.number}} <br>
+    Latitude: {{person.latitude}}<br>
+    Longitude: {{person.longitude}}<br>
+    <br>
+</div>
 {% endfor %}
 </ul>
 {% endblock%}
